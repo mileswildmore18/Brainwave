@@ -7,8 +7,9 @@ const Button = ({ className, href, onClick, children, px, white }) => {
   } ${white ? "text-n-8" : "text-n-1"} ${className || ""}`;
 //   Make button more reusable
 const spanClasses = 'relative z-10';
+// Make button clickable to make menu appear on mobile as well as closing it
   const renderButton = () => (
-    <button className={classes}>
+    <button className={classes} onClick={onClick}>
       <span className={spanClasses}>{children}</span>
       {ButtonSvg(white)}
     </button>
