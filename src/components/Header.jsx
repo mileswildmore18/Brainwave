@@ -2,19 +2,36 @@ import { useLocation } from "react-router-dom";
 import { brainwave } from "../assets";
 import { navigation } from "../constants";
 import Button from "./button";
+import MenuSvg from '../assets/svg/MenuSvg';
+import { HamburgerMenu } from "./design/Header";
+import { useState } from "react";
 // Title with logo of Brainwave
 const Header = () => {
   const pathname = useLocation();
+//   Add dropdown menu for mobile
+  const [openNavigation, setopenNavigation] = useState(true);
+//   Check if navigation is open
+  const toggleNavigation = () => {
+    if(openNavigation) {
+        setopenNavigation(false);
+    }   else {
+        setopenNavigation(true);
+    }
+  };
 
+//   check if hamburger icon is clicked to activate the dropdown menu on mobile
+const handleClick = () => {
+    setopenNavigation(false);
+}
   return (
-    // Make it responsive for different size devices
-    <div className="fixed top-0 left-0 w-full z-50 bg-n-8/90 backdrop-blur-sm border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm">
+    // Make it responsive for different size devices as well as mobile
+    <div className={`fixed top-0 left-0 w-full z-50 bg-n-8/90 backdrop-blur-sm border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${openNavigation ? 'bg-n-8' : 'bg-n-8/90 backdrop-blur-sm'}`}>
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
         <a className="block w-[12rem] xl:mr-8" href="#hero">
           <img src={brainwave} width={190} height={40} alt="Brainwave" />
         </a>
-
-        <nav className="hidden fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto">
+        {/* Check if navigation is open */}
+        <nav className={` ${openNavigation ? 'flex' : 'hidden'} fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}>
           <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
             {/* Add navigations from items in index.js */}
             {navigation.map((item) => (
@@ -34,6 +51,8 @@ const Header = () => {
                 {item.title}
               </a>
             ))}
+
+            <HamburgerMenu />
           </div>
         </nav>
 
@@ -45,6 +64,13 @@ const Header = () => {
         </a>
         <Button className="hidden lg:flex" href="#login">
             Sign in
+        </Button>
+        
+        {/* Add Hamburger icon on right side on mobile */}
+        <Button className="ml-auto lg:hidden" px="px-3" onClick={toggleNavigation}
+        >
+            <MenuSvg openNavigation={openNavigation} />
+
         </Button>
       </div>
     </div>
