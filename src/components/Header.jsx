@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import { brainwave } from "../assets";
 import { navigation } from "../constants";
 import Button from "./button";
@@ -14,13 +15,20 @@ const Header = () => {
   const toggleNavigation = () => {
     if(openNavigation) {
         setopenNavigation(false);
+        // Add function to keep page scroll on
+        enablePageScroll();
     }   else {
         setopenNavigation(true);
+        // Add function to turn page scroll off
+        disablePageScroll();
     }
   };
 
 //   check if hamburger icon is clicked to activate the dropdown menu on mobile
 const handleClick = () => {
+    if(!openNavigation) return;
+    // Keep page scroll on if not in navigation section
+    enablePageScroll();
     setopenNavigation(false);
 }
   return (
