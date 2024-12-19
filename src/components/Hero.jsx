@@ -7,6 +7,7 @@ import { heroIcons } from "../constants";
 // Import npm ScrollParallax
 import { ScrollParallax } from "react-just-parallax";
 import { useRef } from "react";
+import Generating from "./Generating";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -23,7 +24,8 @@ const Hero = () => {
       <div className="container relative" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb:[6rem]">
           <h1 className="h1 mb-6">
-            Explore the Possibilities of AI Chatting with {` `}
+            {/* Add  */}
+            Explore the Possibilities of&nbsp;AI&nbsp;Chatting with {` `}
             {/* Provide a colourful line underneath the last word in the title */}
             <span className="inline-block relative">
               Brainwave{" "}
@@ -60,6 +62,8 @@ const Hero = () => {
                   height={490}
                   alt="AI"
                 />
+                {/* Add the AI Generating box */}
+                <Generating className="absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2" />
                 {/* Add the Scroll animation effect */}
                 <ScrollParallax isAbsolutelyPositioned>
                   <ul className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl xl:flex">
@@ -85,10 +89,12 @@ const Hero = () => {
               alt="hero"
             />
           </div>
-        {/* Add circles from the Hero Design section */}
+          {/* Add circles from the Hero Design section */}
           <BackgroundCircles />
         </div>
       </div>
+
+      <BottomLine />
     </Section>
   );
 };
