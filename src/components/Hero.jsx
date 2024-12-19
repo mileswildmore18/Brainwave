@@ -1,8 +1,16 @@
-import { curve, heroBackground } from "../assets";
+import { curve, heroBackground, robot } from "../assets";
 import Section from "./section";
 import Button from "./button";
-import { robot } from "../assets";
+// Import the circle and animations from the Hero in design
+import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
+import { heroIcons } from "../constants";
+// Import npm ScrollParallax
+import { ScrollParallax } from "react-just-parallax";
+import { useRef } from "react";
+
 const Hero = () => {
+  const parallaxRef = useRef(null);
+
   return (
     <Section
       className="pt-[12rem] -mt-[5.25rem]"
@@ -11,11 +19,11 @@ const Hero = () => {
       customPaddings
       id="hero"
     >
-      {/* Provide responsiveness to each device size screens */}
-      <div className="container relative">
+      {/* Provide responsiveness to each device size screens and add the Icons from Hero design */}
+      <div className="container relative" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb:[6rem]">
           <h1 className="h1 mb-6">
-            Explore the Possibilities of AI Chatting with { ` `}
+            Explore the Possibilities of AI Chatting with {` `}
             {/* Provide a colourful line underneath the last word in the title */}
             <span className="inline-block relative">
               Brainwave{" "}
@@ -42,7 +50,7 @@ const Hero = () => {
           <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">
             <div className="relative bg-n-8 rounded-[1rem]">
               <div className="h-[1.4rem] bg-n-10 rounded-t-[0.9rem]" />
-              {/* Adjust the size of the phot of robot on different size screens */}
+              {/* Adjust the size of the photo of robot on different size screens */}
               <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
                 {/* Add image of the robot picture */}
                 <img
@@ -52,6 +60,16 @@ const Hero = () => {
                   height={490}
                   alt="AI"
                 />
+                {/* Add the Scroll animation effect */}
+                <ScrollParallax isAbsolutelyPositioned>
+                  <ul className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl xl:flex">
+                    {heroIcons.map((icon, index) => (
+                      <li className="p-5" key={index}>
+                        <img src={icon} width={24} height={25} alt={icon} />
+                      </li>
+                    ))}
+                  </ul>
+                </ScrollParallax>
               </div>
             </div>
           </div>
