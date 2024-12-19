@@ -72,6 +72,8 @@ const Hero = () => {
                 </ScrollParallax>
               </div>
             </div>
+            {/* Add 3d effect for picture of robot popping up */}
+            <Gradient />
           </div>
           {/* Add background of the robot hero picture adjustable on different screen sizes and appear on top of the main picture */}
           <div className="absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top=[104%]">
@@ -83,6 +85,8 @@ const Hero = () => {
               alt="hero"
             />
           </div>
+        {/* Add circles from the Hero Design section */}
+          <BackgroundCircles />
         </div>
       </div>
     </Section>
