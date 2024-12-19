@@ -1,5 +1,6 @@
 import { curve } from "../assets";
 import Section from "./section";
+import Button from "./button";
 const Hero = () => {
   return (
     <Section
@@ -16,7 +17,6 @@ const Hero = () => {
             Explore the Possibilities of AI Chatting with BrainwaveCurve
             {/* Provide a colourful line underneath the last word in the title */}
             <span className="inline-block relative">
-              {" "}
               Brainwave{" "}
               <img
                 src={curve}
@@ -27,6 +27,14 @@ const Hero = () => {
               />
             </span>
           </h1>
+          {/* Make paragraph responsive on different size devices */}
+          <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
+            Unleash the power of AI within Brainwave. Upgrade your productivity
+            with Brainwave, the open AI chat app.
+          </p>
+          <Button href="/pricing" white>
+            Get Started
+          </Button>
         </div>
       </div>
     </Section>
