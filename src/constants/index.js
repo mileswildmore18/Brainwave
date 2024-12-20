@@ -129,7 +129,7 @@ import {
   
   export const collabText =
     "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.";
-  
+  // Titles for the Collaboration section of the website 
   export const collabContent = [
     {
       id: "0",
