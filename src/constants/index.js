@@ -126,7 +126,7 @@ import {
       imageUrl: roadmap4,
     },
   ];
-  
+  // Collaboration Text to place on right side of screen for desktop in Collaboration section
   export const collabText =
     "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.";
   // Titles for the Collaboration section of the website 
