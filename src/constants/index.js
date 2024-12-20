@@ -240,7 +240,7 @@ import {
       ],
     },
   ];
-  
+  // Add cards to the benefit section
   export const benefits = [
     {
       id: "0",
