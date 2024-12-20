@@ -1,5 +1,6 @@
 import { check } from "../assets";
 import { collabContent } from "../constants";
+import Button from "./button";
 import Section from "./section";
 // Add Collaborations
 const Collaboration = () => {
@@ -24,6 +25,8 @@ const Collaboration = () => {
               </li>
             ))}
           </ul>
+
+          <Button>Try it now</Button>
         </div>
       </div>
     </Section>
