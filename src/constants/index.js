@@ -77,6 +77,7 @@ import {
   
   export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
   
+  // Add it to Services section of the website
   export const brainwaveServices = [
     "Photo generating",
     "Photo enhance",
