@@ -145,7 +145,7 @@ import {
       title: "Top-notch Security",
     },
   ];
-  
+  // App icons that will appear around the circles in Collaboration section
   export const collabApps = [
     {
       id: "0",

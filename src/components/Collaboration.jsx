@@ -1,5 +1,5 @@
 import { brainwaveSymbol, check } from "../assets";
-import { collabContent, collabText } from "../constants";
+import { collabApps, collabContent, collabText } from "../constants";
 import Button from "./button";
 import Section from "./section";
 // Add Collaborations
@@ -50,6 +50,35 @@ const Collaboration = () => {
                 </div>
               </div>
             </div>
+
+            {/* Add apps around the circle */}
+            <ul>
+              {collabApps.map((app, index) => (
+                // List of app icons in a circle around the Brainwave icon
+                <li
+                  key={app.id}
+                  className={`absolute top-0 left-1/2 h-1/2 -ml-[1.6rem] origin-bottom rotate-${
+                    index * 45
+                  }`}
+                >
+                  {/* Position icons on the big circle and keep logos upright along with a border */}
+                  <div
+                    className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${
+                      index * 45
+                    }`}
+                  >
+                    {/* Make icons scale to size around circle */}
+                    <img
+                      className="m-auto"
+                      width={app.width}
+                      height={app.height}
+                      alt={app.title}
+                      src={app.icon}
+                    />
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
