@@ -1,4 +1,4 @@
-import { check } from "../assets";
+import { brainwaveSymbol, check } from "../assets";
 import { collabContent, collabText } from "../constants";
 import Button from "./button";
 import Section from "./section";
@@ -28,10 +28,30 @@ const Collaboration = () => {
 
           <Button>Try it now</Button>
         </div>
-            {/* Add content on right side of the screen on desktop */}
+        {/* Add content on right side of the screen on desktop */}
         <div className="lg:ml-auto xl:w-[38rem] mt-4">
-            <p className="body-2 mb-4 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">{collabText}</p>
-            </div>    
+          <p className="body-2 mb-4 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
+            {collabText}
+          </p>
+          {/* Add a circle border */}
+          <div className="relative left-1/2 flex w-[22rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100">
+            {/* Add a smaller circle border */}
+            <div className="flex w-60 aspect-square m-auto border border-n-6 rounded-full">
+              {/* Add an even smaller circle border */}
+              <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">
+                {/* Place brainwave icon in center of the circle */}
+                <div className="flex items-center justify-center w-full h-full bg-n-8 rounded-full">
+                  <img
+                    src={brainwaveSymbol}
+                    width={48}
+                    height={48}
+                    alt="brainwave"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </Section>
   );
