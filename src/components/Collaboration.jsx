@@ -2,6 +2,7 @@ import { brainwaveSymbol, check } from "../assets";
 import { collabApps, collabContent, collabText } from "../constants";
 import Button from "./button";
 import Section from "./section";
+import { LeftCurve, RightCurve } from "./design/Collaboration"
 // Add Collaborations
 const Collaboration = () => {
   return (
@@ -30,7 +31,7 @@ const Collaboration = () => {
         </div>
         {/* Add content on right side of the screen on desktop */}
         <div className="lg:ml-auto xl:w-[38rem] mt-4">
-          <p className="body-2 mb-4 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
+          <p className="body-2 mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
             {collabText}
           </p>
           {/* Add a circle border */}
@@ -79,6 +80,10 @@ const Collaboration = () => {
                 </li>
               ))}
             </ul>
+            
+            {/* Add curves from the design of Collaboration */}
+            <LeftCurve />
+            <RightCurve />
           </div>
         </div>
       </div>
