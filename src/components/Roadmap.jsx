@@ -32,7 +32,17 @@ const Roadmap = () => {
                                 <div>
                                     {/* Add status of the roadmap sections */}
                                     <img src={item.status === 'done' ? check2 : loading1} className="mr-2.5" width={16} height={16} alt="Status"/>
+                                    <div className="tagline">
+                                        {status}
+                                    </div>
                                 </div>
+                                {/* Display images based on the exact roadmap */}
+                                <div className="mb-10">
+                                <img src={item.imageUrl} className="w-full" width={630} height={420} alt={item.title}/>
+                                </div>
+                                {/* Title of each roadmap */}
+                                <h4 className="h4 mb-4">{item.title}</h4>
+                                <p className="body-2 text-n-4">{item.text}</p>
                             </div>
                         </div>
                     </div>
