@@ -2,6 +2,8 @@ import React from "react";
 import Section from "./section";
 import Heading from "./Heading";
 import { roadmap } from "../constants";
+import { check2, grid, loading1 } from "../assets";
+import Tagline from "./Tagline";
 // Add the future productivity worked on
 const Roadmap = () => {
   return (
@@ -13,6 +15,29 @@ const Roadmap = () => {
             {/* Declare is status of the roadmaps are ready or still in progress */}
         {roadmap.map((item) => {
             const status = item.status === 'done' ? 'Done' : 'In Progress';
+            // Add the roadmap progress items
+            return (
+                <div key={item.id}>
+                    <div>
+                        <div>
+                            {/* Add grid image */}
+                            <img src={grid} className="w-full" width={550} height={550} alt="Grid"/>
+                        </div>
+                        <div className="relative z-1">
+                            <div className="flex items-center justify-between">
+                                {/* Add date of the timeline */}
+                                <Tagline>
+                                    {item.date}
+                                </Tagline>
+                                <div>
+                                    {/* Add status of the roadmap sections */}
+                                    <img src={item.status === 'done' ? check2 : loading1} className="mr-2.5" width={16} height={16} alt="Status"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )
         })}
         </div>
       </div>
