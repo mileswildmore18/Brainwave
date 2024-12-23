@@ -1,3 +1,4 @@
+import { check } from "../assets";
 import { pricing } from "../constants";
 import Button from "./button";
 // Show 3 different prices of the AI
@@ -25,9 +26,23 @@ const PricingList = () => {
             )}
           </div>
           {/* Add reusable button for each option if it has a price or not */}
-            <Button className="w-full mb-6" href={item.price ? '/pricing' : 'mailto:contact@jsmastery.pro'}>
-                {item.price ? "Get started" : "Contact us"}
-            </Button>
+          <Button
+            className="w-full mb-6"
+            href={item.price ? "/pricing" : "mailto:contact@jsmastery.pro"}
+            // Make price buttons white if section has a price
+            white={!!item.price}
+          >
+            {item.price ? "Get started" : "Contact us"}
+          </Button>
+          <ul>
+            {/* Display features of each pricing section */}
+            {item.features.map((feature, index) =>(
+                <li key={index}>
+                    <img src={check} width={24} height={24} alt="Check"/>
+                    <p>{feature}</p>
+                </li>
+            ))}
+          </ul>
         </div>
       ))}
     </div>
