@@ -205,7 +205,7 @@ import {
       height: 32,
     },
   ];
-  
+  // Add prices of the AI Brainwave to the PricingList to display them on the webpage
   export const pricing = [
     {
       id: "0",

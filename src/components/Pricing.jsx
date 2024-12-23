@@ -1,5 +1,8 @@
+
 import { smallSphere, stars } from "../assets";
 import Heading from "./Heading";
+import PricingList from "./PricingList";
+import { LeftLine, RightLine } from "./design/Pricing";
 import Section from "./section";
 // Display the pricing of the AI
 const Pricing = () => {
@@ -31,9 +34,11 @@ const Pricing = () => {
             tag="Get started with Brainwave"
             title="Pay once, use forever"
         />
-
+        {/* Display the list of prices custom lines on each side*/}
         <div className="relative">
-
+        <PricingList />
+        <LeftLine />
+        <RightLine />
         </div>
       </div>
     </Section>
