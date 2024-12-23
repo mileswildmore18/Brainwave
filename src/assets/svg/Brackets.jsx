@@ -1,4 +1,5 @@
 const brackets = (position) =>
+  // Display two brackets in two different components
   position === "left" ? (
     <svg
       width="5"
