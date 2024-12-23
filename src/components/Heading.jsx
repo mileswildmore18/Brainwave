@@ -3,7 +3,7 @@ const Heading = ({ className, title, text, tag }) => {
   // Use reusable components
   return (
     // Make title responsive on different devices
-    <div className={`${className} max-w-[50rem] mx-auto mb-12 lg:mb-20`}>
+    <div className={`${className} max-w-[50rem] mx-auto mb-12 lg:mb-20 md:text-center`}>
         {/* Display a tag from the tagline component */}
         {tag && (
             <Tagline className="mb-4 md:justify-center">
