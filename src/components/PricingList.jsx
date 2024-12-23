@@ -15,13 +15,13 @@ const PricingList = () => {
           {/* Add title for each option */}
           <h4 className="h4 mb-4">{item.title}</h4>
           {/* Add information about each option */}
-          <p>{item.description}</p>
+          <p className="body-2 min-h-[4rem] mb-3 text-n-1/50">{item.description}</p>
           {/* Display the price of each section */}
-          <div>
+          <div className="flex items-center h-[5.5rem] mb-6">
             {item.price && (
               <>
-                <div>$</div>
-                <div>{item.price}</div>
+                <div className="h3">$</div>
+                <div className="text-[5.5rem] leading-none font-bold">{item.price}</div>
               </>
             )}
           </div>
@@ -37,9 +37,9 @@ const PricingList = () => {
           <ul>
             {/* Display features of each pricing section */}
             {item.features.map((feature, index) =>(
-                <li key={index}>
+                <li key={index} className="flex items-start py-5 border border-n-6">
                     <img src={check} width={24} height={24} alt="Check"/>
-                    <p>{feature}</p>
+                    <p className="body-2 ml-4">{feature}</p>
                 </li>
             ))}
           </ul>
