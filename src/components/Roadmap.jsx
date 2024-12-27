@@ -1,10 +1,9 @@
-import React from "react";
 import Section from "./section";
 import Heading from "./Heading";
 import { roadmap } from "../constants";
 import { check2, grid, loading1 } from "../assets";
 import Tagline from "./Tagline";
-import { Gradient } from "./design/Hero";
+import { Gradient } from "./design/Roadmap";
 import Button from "./button";
 // Add the future productivity worked on
 const Roadmap = () => {
@@ -61,8 +60,8 @@ const Roadmap = () => {
                       <img
                         src={item.imageUrl}
                         className="w-full"
-                        width={630}
-                        height={420}
+                        width={628}
+                        height={426}
                         alt={item.title}
                       />
                     </div>
