@@ -1,4 +1,4 @@
-import SectionSvg from '../assets/svg/SectionSvg';
+import SectionSvg from "../assets/svg/SectionSvg";
 
 const section = ({
   className,
@@ -10,7 +10,7 @@ const section = ({
 }) => {
   return (
     <div
-    id={id}
+      id={id}
       className={` relative ${
         customPaddings ||
         `py-10 lg:py-16 xl:py-20 ${crosses ? "lg:py-32 xl:py-40" : ""} ${
@@ -25,12 +25,15 @@ const section = ({
 
       {/* Check for crosses on desktop devices and responsiveness */}
       {crosses && (
-      <>
-      <div className={`hidden absolute top-0 left-7.5 right-7.5 h-0.25 bg-stroke-1 ${crossesOffset && crossesOffset} pointer-events-none lg:block xl:left-10 right-10`}
-      />
-      <SectionSvg crossesOffset={crossesOffset}/>
-      </>
-    )}
+        <>
+          <div
+            className={`hidden absolute top-0 left-7.5 right-7.5 h-0.25 bg-stroke-1 ${
+              crossesOffset && crossesOffset
+            } pointer-events-none lg:block xl:left-10 right-10`}
+          />
+          <SectionSvg crossesOffset={crossesOffset} />
+        </>
+      )}
     </div>
   );
 };

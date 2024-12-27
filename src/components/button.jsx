@@ -5,9 +5,9 @@ const Button = ({ className, href, onClick, children, px, white }) => {
   const classes = `button relative inline-flex items-center justify-center h-11 transition-colors hover:text-color-1 ${
     px || "px-7"
   } ${white ? "text-n-8" : "text-n-1"} ${className || ""}`;
-//   Make button more reusable
-const spanClasses = 'relative z-10';
-// Make button clickable to make menu appear on mobile as well as closing it
+  //   Make button more reusable
+  const spanClasses = "relative z-10";
+  // Make button clickable to make menu appear on mobile as well as closing it
   const renderButton = () => (
     <button className={classes} onClick={onClick}>
       <span className={spanClasses}>{children}</span>
@@ -15,16 +15,14 @@ const spanClasses = 'relative z-10';
     </button>
   );
 
-// Add link to the button
+  // Add link to the button
   const renderLink = () => (
     <a href={href} className={classes}>
-        <span className={spanClasses}>{children}</span>
-        {ButtonSvg(white)}
+      <span className={spanClasses}>{children}</span>
+      {ButtonSvg(white)}
     </a>
-  )
-  return href
-  ? renderLink()
-  : renderButton();
+  );
+  return href ? renderLink() : renderButton();
 };
 
 export default Button;

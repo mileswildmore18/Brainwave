@@ -2,7 +2,7 @@ import { brainwaveSymbol, check } from "../assets";
 import { collabApps, collabContent, collabText } from "../constants";
 import Button from "./button";
 import Section from "./section";
-import { LeftCurve, RightCurve } from "./design/Collaboration"
+import { LeftCurve, RightCurve } from "./design/Collaboration";
 // Add Collaborations
 const Collaboration = () => {
   return (
@@ -80,7 +80,7 @@ const Collaboration = () => {
                 </li>
               ))}
             </ul>
-            
+
             {/* Add curves from the design of Collaboration */}
             <LeftCurve />
             <RightCurve />
