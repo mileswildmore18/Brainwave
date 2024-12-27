@@ -11,7 +11,7 @@ import { useState } from "react";
 const Header = () => {
   const pathname = useLocation();
   //   Add dropdown menu for mobile
-  const [openNavigation, setopenNavigation] = useState(true);
+  const [openNavigation, setopenNavigation] = useState(false);
   //   Check if navigation is open
   const toggleNavigation = () => {
     if (openNavigation) {
