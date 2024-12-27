@@ -12,7 +12,6 @@ Welcome to the Brainwave page! Here you will find the new way to use AI Chatting
  * [License](#license)
  * [Contributing](#contributing)
  * [Tests](#tests)
- * [Questions](#questions)
  * [Resources](#resources)
 
 ## Installation
