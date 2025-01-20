@@ -5,6 +5,9 @@
 ## Description
 Welcome to the Brainwave page! Here you will find the new way to use AI Chatting at a new level! You will be able to see the new features along with adding it to your life in the future. There are projects on the horizon!
 
+# Link
+[milesbrainwave.netlify.app](https://milesbrainwave.netlify.app/)
+
 ## Table of Contents
  * [Description](#description)
  * [Installation](#installation)
