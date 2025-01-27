@@ -18,7 +18,7 @@ Welcome to the Brainwave page! Here you will find the new way to use AI Chatting
  * [Resources](#resources)
 
 ## Installation
-You will need these npm (Node Package Manager) in order to view Apple. You will navigate to the root of the directory of the package.json file, navigate to "Open in Integrated Terminal" and enter these commands to install the packages:
+You will need these npm (Node Package Manager) in order to view Brainwave. You will navigate to the root of the directory of the package.json file, navigate to "Open in Integrated Terminal" and enter these commands to install the packages:
 ```
 npm install
 npm install gsap
@@ -27,7 +27,7 @@ npm install gsap
 
 
 ## Usage
-You can use the "Node.js" terminal to check out Apple, and checkout information about what amazing new Apple products are up for sale.
+You can use the "Node.js" terminal to check out Brainwave, and checkout information about what amazing new Apple products are up for sale.
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
